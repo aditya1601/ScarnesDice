@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_game"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.cyberiontiger.scarnesdice.IntroActivity"
+    tools:showIn="@layout/activity_intro">
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/dice1"
+        android:id="@+id/imageView"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="Dice Image"
+        tools:ignore="HardcodedText" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_action_stop"
+        android:layout_alignTop="@+id/comp_scores"
+        android:id="@+id/comp_status"
+        android:layout_alignBottom="@+id/comp_scores"
+        android:layout_alignEnd="@+id/user_status"
+        android:contentDescription="Status Light for Computer"
+        tools:ignore="HardcodedText" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_action_stop"
+        android:id="@+id/user_status"
+        android:layout_alignTop="@+id/total_scores"
+        android:layout_marginEnd="8dp"
+        android:layout_above="@+id/comp_scores"
+        android:contentDescription="Status Light for Player"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:text="Comp Scores : "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:id="@+id/comp_scores"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        android:layout_below="@+id/total_scores"
+        android:layout_toEndOf="@+id/user_status"
+        tools:ignore="HardcodedText"
+        android:contentDescription="Total Score of Computer" />
+
+    <TextView
+        android:text="Player Score : "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/total_scores"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        android:layout_marginTop="61dp"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/user_status"
+        tools:ignore="HardcodedText"
+        android:contentDescription="Total Score of Player" />
+
+    <TextView
+        android:text="This Turn Score : "
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/turn_scores"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        tools:ignore="HardcodedText"
+        android:layout_marginTop="50dp"
+        android:layout_below="@+id/imageView"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/border"
+        android:paddingLeft="10dp"
+        android:paddingBottom="7dp"
+        android:paddingRight="10dp"
+        android:paddingTop="7dp" />
+
+</RelativeLayout>
